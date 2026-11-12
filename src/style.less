@@ -1,0 +1,196 @@
+
+
+@principal: #244c43;
+@secundario: #c69b65;
+@fondo: #f5f5f2;
+@blanco: #ffffff;
+@texto: #333333;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: @fondo;
+    color: @texto;
+    line-height: 1.6;
+}
+
+// Navegación
+.header {
+    background: @principal;
+    padding: 18px 8%;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        color: @blanco;
+        font-size: 22px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .menu {
+        display: flex;
+        gap: 20px;
+
+        a {
+            color: @blanco;
+            text-decoration: none;
+
+            &:hover {
+                color: @secundario;
+            }
+        }
+    }
+}
+
+
+.hero {
+    min-height: 430px;
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    background: @principal;
+    color: @blanco;
+
+    .hero-text {
+        max-width: 650px;
+    }
+
+    h1 {
+        font-size: 42px;
+        margin: 12px 0;
+    }
+
+    h2 {
+        color: @secundario;
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.etiqueta {
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+
+.boton {
+    display: inline-block;
+    padding: 12px 24px;
+    background: @secundario;
+    color: @blanco;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+
+    &:hover {
+        background: darken(@secundario, 10%);
+    }
+}
+
+
+.seccion {
+    padding: 65px 10%;
+    text-align: center;
+
+    h2 {
+        color: @principal;
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    > p {
+        max-width: 750px;
+        margin: auto;
+    }
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.tarjeta {
+    background: @blanco;
+    padding: 25px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 3px 12px #00000012;
+
+    h3 {
+        color: @principal;
+        margin-bottom: 12px;
+    }
+}
+
+
+.contacto {
+    background: #e8eeeb;
+
+    .boton {
+        margin-top: 20px;
+    }
+}
+
+
+footer {
+    background: @principal;
+    color: @blanco;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (max-width: 700px) {
+
+    .header {
+        .nav {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+    }
+
+    .hero {
+        padding: 65px 7%;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    .seccion {
+        padding: 45px 7%;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+}
